@@ -10,6 +10,7 @@ namespace MethodThree
     {
         static void Main(string[] args)
         {
+            MathFunctions mathFunctions = new MathFunctions();
             Console.WriteLine("Please enter a whole number:");
             int first = Convert.ToInt32(Console.ReadLine());
 
@@ -20,11 +21,11 @@ namespace MethodThree
 
             if(second != "")
             {
-                Console.WriteLine(MathFunctions.AddTwo(first, Convert.ToInt32(second)).ToString());
+                Console.WriteLine(mathFunctions.AddTwo(first, Convert.ToInt32(second)).ToString());
             }
             else
             {
-                Console.WriteLine(MathFunctions.AddTwo(first).ToString());
+                Console.WriteLine(mathFunctions.AddTwo(first).ToString());
             }
             Console.ReadLine();
         }
