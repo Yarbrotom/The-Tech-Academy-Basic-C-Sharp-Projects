@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace MethodsFive
 {
-    public static class divide
+    public class MathFunctions
     {
-        public static void Division(int x, out int answer)
+        public void MathFunction(int x, out int answer)
         {
             answer = Convert.ToInt32(x / 2);
         }
 
-        public static void Division(int x, int y, out int answerOne, out int answerTwo)
+        public void MathFunction(int x, int y, out int answerOne, out int answerTwo)
         {
             answerOne = x * 2;
             answerTwo = y * 3;
