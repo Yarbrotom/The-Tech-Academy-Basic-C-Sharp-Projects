@@ -10,13 +10,14 @@ namespace MethodsAgain
     {
         static void Main(string[] args)
         {
-            int answer = Addition.Adding(5);
-            Console.WriteLine(answer.ToString());
+            Addition addition = new Addition();
+            int answer = addition.Adding(5);
+            Console.WriteLine(addition.Adding(5).ToString());
 
-            int answerTwo = Addition.Adding(5.5m);
+            int answerTwo = addition.Adding(5.5m);
             Console.WriteLine(answerTwo.ToString());
 
-            int answerThree = Addition.Adding("5");
+            int answerThree = addition.Adding("5");
             Console.WriteLine(answerThree.ToString());
             Console.ReadLine();
         }
