@@ -8,7 +8,7 @@ namespace FourthMethods
 {
     public class MathFunctions
     {
-        public static void AddTwo(int x, int y)
+        public void AddTwo(int x, int y)
         {
             int number = x + 12;
 

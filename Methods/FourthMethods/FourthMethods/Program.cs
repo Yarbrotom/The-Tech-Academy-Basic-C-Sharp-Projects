@@ -10,7 +10,8 @@ namespace FourthMethods
     {
         static void Main(string[] args)
         {
-            MathFunctions.AddTwo(4, y: 5);
+            MathFunctions mathFunctions = new MathFunctions();
+            mathFunctions.AddTwo(4, y: 5);
             Console.ReadLine();
         }
     }
