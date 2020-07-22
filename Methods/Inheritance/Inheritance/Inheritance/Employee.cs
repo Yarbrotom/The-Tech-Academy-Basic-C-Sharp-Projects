@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwentyOne
+namespace Inheritance
 {
-    class TwentyOne
+    class Employee : Person
     {
-
+        public int id { get; set; }
     }
 }
