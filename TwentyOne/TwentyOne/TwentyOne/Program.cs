@@ -10,13 +10,14 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
+
             TwentyOneGame game = new TwentyOneGame();
-            game.Players = new List<string>() { "Jesse", "Bill", "Joe"};
+            game.Players = new List<string>() { "Jesse", "Bill", "Bob" };
             game.ListPlayers();
-            game.Play();
             Console.ReadLine();
-            //Deck deck = new Deck();
-            //deck.Shuffle(3);
+
+            Deck deck = new Deck();
+            deck.Shuffle(3);
 
             foreach(Card card in deck.Cards)
             {

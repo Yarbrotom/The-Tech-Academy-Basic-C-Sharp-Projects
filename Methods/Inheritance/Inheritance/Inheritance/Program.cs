@@ -18,6 +18,9 @@ namespace Inheritance
 
             employee.SayName();
             Console.ReadLine();
+
+            IQuittable newEmployee = new Employee();
+            newEmployee.Quit();
         }
     }
 }
