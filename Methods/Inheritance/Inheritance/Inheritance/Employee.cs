@@ -14,5 +14,17 @@ namespace Inheritance
         {
             throw new NotImplementedException();
         }
+
+        public static bool operator== (Employee employeeOne, Employee employeeTwo)
+        {
+            bool check = employeeOne.id == employeeTwo.id;
+            return check;
+        }
+
+        public static bool operator!= (Employee employeeOne, Employee employeeTwo)
+        {
+            bool check = !(employeeOne.id == employeeTwo.id);
+            return check;
+        }
     }
 }
