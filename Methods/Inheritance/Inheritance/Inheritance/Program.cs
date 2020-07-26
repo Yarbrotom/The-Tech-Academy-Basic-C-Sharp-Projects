@@ -10,17 +10,32 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee()
+            Employee<string> names = new Employee<string>();
+            names.things = new List<string>() { "Ryu", "Ken", "Chun Li" };
+
+            Employee<int> ranks = new Employee<int>();
+            ranks.things = new List<int>() { 1, 2, 3 };
+
+            foreach (string name in names.things)
             {
-                FirstName = "Sample",
-                LastName = "Student"
-            };
-
-            employee.SayName();
+                Console.WriteLine(name);
+            }
+            foreach (int rank in ranks.things)
+            {
+                Console.WriteLine(rank.ToString());
+            }
             Console.ReadLine();
+            //Employee employee = new Employee()
+            //{
+            //    FirstName = "Sample",
+            //    LastName = "Student"
+            //};
 
-            IQuittable newEmployee = new Employee();
-            newEmployee.Quit();
+            //employee.SayName();
+            //Console.ReadLine();
+
+            //IQuittable newEmployee = new Employee();
+            //newEmployee.Quit();
         }
     }
 }
