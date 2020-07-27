@@ -10,32 +10,82 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            Employee<string> names = new Employee<string>();
-            names.things = new List<string>() { "Ryu", "Ken", "Chun Li" };
 
-            Employee<int> ranks = new Employee<int>();
-            ranks.things = new List<int>() { 1, 2, 3 };
-
-            foreach (string name in names.things)
+            List<Employee> employees = new List<Employee>();
+            employees.Add(new Employee
             {
-                Console.WriteLine(name);
-            }
-            foreach (int rank in ranks.things)
+                firstName = "Joe",
+                lastName = "Smith",
+                id = 1
+            });
+            employees.Add(new Employee
             {
-                Console.WriteLine(rank.ToString());
+                firstName = "Joe",
+                lastName = "Taylor",
+                id = 2
+            });
+            employees.Add(new Employee
+            {
+                firstName = "Malex",
+                lastName = "Smith",
+                id = 3
+            });
+            employees.Add(new Employee
+            {
+                firstName = "Shed",
+                lastName = "Long",
+                id = 4
+            });
+            employees.Add(new Employee
+            {
+                firstName = "Kyle",
+                lastName = "Seager",
+                id = 5
+            });
+            employees.Add(new Employee
+            {
+                firstName = "Kyle",
+                lastName = "Lewis",
+                id = 6
+            });
+            employees.Add(new Employee
+            {
+                firstName = "Tim",
+                lastName = "Lopes",
+                id = 7
+            });
+            employees.Add(new Employee
+            {
+                firstName = "Evan",
+                lastName = "White",
+                id = 8
+            });
+            employees.Add(new Employee
+            {
+                firstName = "Austin",
+                lastName = "Nola",
+                id = 9
+            });
+            employees.Add(new Employee
+            {
+                firstName = "JP",
+                lastName = "Crawford",
+                id = 10
+            });
+
+            List<Employee> employeesNamedJoe = new List<Employee>();
+            foreach (Employee employee in employees)
+            {
+                if (employee.firstName == "Joe")
+                {
+                    employeesNamedJoe.Add(employee);
+                }
             }
-            Console.ReadLine();
-            //Employee employee = new Employee()
-            //{
-            //    FirstName = "Sample",
-            //    LastName = "Student"
-            //};
 
-            //employee.SayName();
-            //Console.ReadLine();
+            List<Employee> employeesLambda = employees.Where(x => x.firstName == "Joe").ToList();
 
-            //IQuittable newEmployee = new Employee();
-            //newEmployee.Quit();
+            List<Employee> employeesById = employees.Where(x => x.id > 5).ToList();
+
         }
     }
 }
