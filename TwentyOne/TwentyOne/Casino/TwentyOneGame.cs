@@ -5,11 +5,11 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using TwentyOne;
+using Casino.Interfaces;
 
-namespace TwentyOne
+namespace Casino.TwentyOne
 {
-    class TwentyOneGame : Game, IWalkAway
+    public class TwentyOneGame : Game, IWalkAway
     {
         public TwentyOneDealer Dealer { get; set; }
 
