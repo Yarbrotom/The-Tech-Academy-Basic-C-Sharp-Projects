@@ -12,7 +12,6 @@ namespace Casino.TwentyOne
     public class TwentyOneGame : Game, IWalkAway
     {
         public TwentyOneDealer Dealer { get; set; }
-
         public override void Play()
         {
             Dealer = new TwentyOneDealer();
@@ -29,7 +28,21 @@ namespace Casino.TwentyOne
 
             foreach (Player player in Players)
             {
-                int bet = Convert.ToInt32(Console.ReadLine());
+                bool validAnswer = false;
+                int bet = 0;
+                while (!validAnswer)
+                {
+                    Console.WriteLine("Place your bet!");
+                    validAnswer = int.TryParse(Console.ReadLine(), out bet);
+                    if (!validAnswer)
+                    {
+                        Console.WriteLine("Please enter a whole number to bet.");
+                    }
+                }
+                if (bet < 0)
+                {
+                    throw new FraudException();
+                }
                 bool succesfullyBet = player.Bet(bet);
                 if (!succesfullyBet)
                 {
