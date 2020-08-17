@@ -56,6 +56,7 @@ namespace CarInsurance.Controllers
                     var quoteVM = new QuoteVM();
                     quoteVM.FirstName = insuree.FirstName;
                     quoteVM.LastName = insuree.LastName;
+                    quoteVM.EmailAddress = insuree.EmailAddress;
                     quoteVM.Quote = insuree.Quote;
                     quoteVMs.Add(quoteVM);
                 }
