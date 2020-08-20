@@ -14,7 +14,7 @@ namespace ElevenPartAssignment
             string[] pokemon = new string[] { "Bulbasaur", "Charmander", "Squirtle" };
             Console.WriteLine("Please type one word that describes your Pokemon:");
             string description = Console.ReadLine();
-            
+
             for (int i = 0; i < pokemon.Length; i++)
             {
                 string name = pokemon[i];
@@ -101,7 +101,7 @@ namespace ElevenPartAssignment
             }
             Console.ReadLine();
 
-
+            // COURSE : C# & .NET FRAMEWORK 2020 PAGE : 147
             List<string> newPokemon = new List<string>() { "Bulbasaur", "Charmander", "Squirtle", "Charmander" };
             List<string> counted = new List<string>();
 
