@@ -16,13 +16,15 @@ namespace moreExceptions
                 int age = Convert.ToInt32(Console.ReadLine());
                 if (age <= 0)
                 {
-                    Console.WriteLine("The age you entered was less than 1.");
-                    Console.ReadLine();
-                    return;
+                    throw new ArgumentException();
                 }
 
                 DateTime birthDate = DateTime.Now.AddYears(-(age));
                 Console.WriteLine("You were born in " + birthDate.Year + ".");
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("The age you entered was less than one.");
             }
             catch (Exception)
             {
